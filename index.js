@@ -11,9 +11,13 @@ app.get('/', (req, res) => {
 const root = { friend: () => {
     return {
         "id": 324243,
-        "firstName": "Magyar-Hunor", "lastName": "Tamas",
+        "firstName": "Magyar-Hunor",
+        "lastName": "Tamas",
         "gender": "Male",
-        "email": "tamasmagyarhunor88@gmail.com"
+        "email": [
+            { email: "tamasmagyarhunor88@gmail.com" },
+            { email: "me@me.com" }
+        ]
     }
 }};
 
