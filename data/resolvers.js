@@ -10,10 +10,13 @@ export const resolvers = {
     Mutation: {
         createFriend: (root, { input }) => {
             const newFriend = new Friends({
-                firstName = input.firstName,
-                lastName = input.lastName,
-                gender = input.gender,
-                email = input.email
+                firstName: input.firstName,
+                lastName: input.lastName,
+                gender: input.gender,
+                language: input.language,
+                age: input.age,
+                email: input.email,
+                contacts: input.contacts
             });
 
             newFriend.id = newFriend._id;
@@ -24,6 +27,6 @@ export const resolvers = {
                     else resolve(newFriend)
                 })
             })
-        }),
+        },
     },
 };
