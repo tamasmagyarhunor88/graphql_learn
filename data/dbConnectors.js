@@ -37,7 +37,7 @@ const friendSchema = new mongoose.Schema({
 const Friends = mongoose.model('friends', friendSchema);
 
 // SQL
-const sequelize = Sequelize('database', null, null, {
+const sequelize = new Sequelize('database', null, null, {
     dialect: 'sqlite',
     store: '/alien.sqlite',
 });

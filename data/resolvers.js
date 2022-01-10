@@ -1,14 +1,14 @@
-import { Friends } from './dbConnectors';
+import { Friends, Aliens } from './dbConnectors';
 
 // resolver map
 export const resolvers = {
     Query: {
-        getFriend: ({ id }) => {
+        getFriend: (_,{ id }) => {
             return new Friend(id, friendDatabase[id]);
         },
     },
     Mutation: {
-        createFriend: (root, { input }) => {
+        createFriend: (_, { input }) => {
             const newFriend = new Friends({
                 firstName: input.firstName,
                 lastName: input.lastName,
