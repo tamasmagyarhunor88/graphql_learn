@@ -28,5 +28,21 @@ export const resolvers = {
                 })
             })
         },
+        updateFriend: (_, { input }) => {
+            return new Promise((resolve, object) => {
+                Friends.findOneAndUpdate({_id: input.id}, input, { new: true}, (err, friend) => {
+                    if (err) reject(err)
+                    else resolve(friend)
+                })
+            })
+        },
+        deleteFriend: (_, { id }) => {
+            return new Promise((resolve, object) => {
+                Friends.remove({_id: id},(err, friend) => {
+                    if (err) reject(err)
+                    else resolve('Successfully deleted friend')
+                })
+            })
+        }
     },
 };
