@@ -50,8 +50,8 @@ change:
 ```
 // SQL
 const sequelize = Sequelize('database', null, null, {
-dialect: 'sqlite',
-store: './alien.sqlite',
+    dialect: 'sqlite',
+    store: './alien.sqlite',
 });
 ```
 
@@ -59,7 +59,7 @@ to:
 ```
 // SQL
 const sequelize = new Sequelize('database', null, null, {
-dialect: 'sqlite',
-store: './alien.sqlite',
+    dialect: 'sqlite',
+    store: './alien.sqlite',
 });
 ```
