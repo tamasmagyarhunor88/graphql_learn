@@ -1,7 +1,7 @@
 # GraphQL learning 
 
 This is a simple 2 hour course on LinkedIn Learning to give you a grasp of GraphQL. 
-<<<<<<< HEAD
+
 It uses MongoDB and sqlite3. 
 
 ## How to run
