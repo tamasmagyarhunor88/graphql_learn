@@ -1,5 +1,6 @@
 # GraphQL learning 
 
+This is a simple 2 hour course on LinkedIn Learning to give you a grasp of GraphQL. 
 
 
 ### Errors
@@ -25,22 +26,20 @@ var sequelize = (0, _sequelize2.default)('database', null, null, {
 TypeError: Class constructor Sequelize cannot be invoked without 'new'
 ```
 
-do this: 
-
-change 
+change: 
 ```
 // SQL
 const sequelize = Sequelize('database', null, null, {
 dialect: 'sqlite',
-store: '/alien.sqlite',
+store: './alien.sqlite',
 });
 ```
 
-to
+to:
 ```
 // SQL
 const sequelize = new Sequelize('database', null, null, {
 dialect: 'sqlite',
-store: '/alien.sqlite',
+store: './alien.sqlite',
 });
 ```
