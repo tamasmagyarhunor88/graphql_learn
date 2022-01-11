@@ -1,5 +1,25 @@
 # GraphQL learning 
 
+This is a simple 2 hour course on LinkedIn Learning to give you a grasp of GraphQL. 
+It uses MongoDB and sqlite3. 
+
+## How to run
+
+Before you start, you should also have MongoDB installed and running. You find the instructions here: https://docs.mongodb.com/manual/administration/install-community/
+```
+git clone https://github.com/tamasmagyarhunor88/graphql_learn.git
+cd graphql_learn
+npm install
+npm start
+```
+
+MongoDB service on Ubuntu with systemctl 
+```
+sudo systemctl status mongod
+sudo systemctl start mongod
+sudo systemctl restart mongod
+sudo systemctl stop mongod
+```
 
 
 ### Errors
@@ -25,22 +45,20 @@ var sequelize = (0, _sequelize2.default)('database', null, null, {
 TypeError: Class constructor Sequelize cannot be invoked without 'new'
 ```
 
-do this: 
-
-change 
+change: 
 ```
 // SQL
 const sequelize = Sequelize('database', null, null, {
 dialect: 'sqlite',
-store: '/alien.sqlite',
+store: './alien.sqlite',
 });
 ```
 
-to
+to:
 ```
 // SQL
 const sequelize = new Sequelize('database', null, null, {
 dialect: 'sqlite',
-store: '/alien.sqlite',
+store: './alien.sqlite',
 });
 ```
